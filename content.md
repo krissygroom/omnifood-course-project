@@ -132,10 +132,10 @@ Privacy & terms
 
 ## Sections
 
-- Logo + Navigation
-- Hero
+[x] Logo + Navigation
+[x] Hero
 - Featured in
-- How it works
+[x] How it works
 - Sample Meals (and list of diets)
 - Testimonials + gallery
 - Pricing + features
