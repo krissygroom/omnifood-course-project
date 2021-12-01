@@ -134,10 +134,10 @@ Privacy & terms
 
 [x] Logo + Navigation
 [x] Hero
-- Featured in
+[x] Featured in
 [x] How it works
-- Sample Meals (and list of diets)
-- Testimonials + gallery
+[x] Sample Meals (and list of diets)
+[x] Testimonials + gallery
 - Pricing + features
 - Call to Action: form to sign up
 - Footer: contact & other links
