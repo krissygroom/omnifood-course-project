@@ -8,5 +8,4 @@ Omnifood responsive website course project:
 - CSS3
 - Flexbox
 - CSS Grid
-- CSS Animations
 - Web Design Principles
