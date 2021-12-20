@@ -8,6 +8,7 @@
 /* ********************************* */
 
 @media (max-width: 84em) {
+    /* 1344/16 = 84em */
     .hero {
         max-width: 120rem;
     }
@@ -61,7 +62,9 @@
 }
 
 
+/* ********************************* */
 /* LESS THAN 960px (Tablets) */
+/* ********************************* */
 @media (max-width: 60em) {
     html {
         /* 8px / 16px */
@@ -113,6 +116,11 @@
 
     .gallery {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* pricing */
+    .pricing-plan {
+        width: 85%;
     }
 
     /* call to action */
@@ -193,6 +201,54 @@
     }
 
 }
+
+
+/* ********************************* */
+/* LESS THAN 704px (Smaller Tablets) */
+/* ********************************* */
+@media (max-width: 44em) {
+    .grid--3-cols, .grid--4-cols {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    /* featured in */
+    .logos img {
+        height: 2.0rem;
+    }
+
+    .diets {
+        /* Center the diets section in 2nd row of grid */
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    .heading-secondary {
+        margin-bottom: 4.8rem;
+    }
+
+    .pricing-plan {
+        width: 100%;
+    }
+
+    /* Footer */
+    /* Change to 6 cols to deal with asymmetric grid */
+    .grid--footer {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .nav-col {
+        /* move these 3 columns to first row of grid*/
+        grid-row: 1;
+        grid-column: span 2;
+        margin-bottom: 3.2rem;
+    }
+
+    .logo-col,
+    .address-col {
+        grid-column: span 3;
+    }
+}
+    
 
 
 
