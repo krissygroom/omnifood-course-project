@@ -6,11 +6,13 @@ const yearEl = document.querySelector('.year');
 const btnMobileNav = document.querySelector('.btn-mobile-nav');
 const headerEl = document.querySelector('.header');
 
+// Select all links on the page
+const allLinks = document.querySelectorAll('a:link');
+
+// ********* Functionality *********
+
 // Set current year
 yearEl.textContent = new Date().getFullYear();
-
-
-// ********* Functions and Events *********
 
 // Make mobile navigation work
 btnMobileNav.addEventListener('click', function() {
@@ -19,6 +21,30 @@ btnMobileNav.addEventListener('click', function() {
     } else {
         headerEl.classList.add("nav-open");
     };
+});
+
+// Smooth Scrolling Animation for Safari/MS Edge
+allLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        const href = link.getAttribute('href');
+
+        // Only prevent default if is not external link
+        if (href.startsWith("#")) e.preventDefault();
+
+        //  Scroll back to top
+        if (href === "#") {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        };
+
+        // Scroll to other parts of page
+        if (href !== "#" && href.startsWith('#')) {
+            const sectionEl = document.querySelector(href);
+            sectionEl.scrollIntoView({behavior: "smooth"});
+        };
+    });
 });
 
 
@@ -43,3 +69,5 @@ function checkFlexGap() {
 }
 
 checkFlexGap();
+
+// https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js

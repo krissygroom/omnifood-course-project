@@ -78,6 +78,9 @@ html {
     10 / 16 = 0.625*/
     font-size: 62.5%;
     overflow-x: hidden;
+
+    /* scroll doesn't work with all browsers - Safari/MS Edge */
+    scroll-behavior: smooth;
 }
 
 body {
