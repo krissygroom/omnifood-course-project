@@ -1,6 +1,25 @@
-// Global variables
+// ********* Global variables *********
+// Select year class in copyright in footer
 const yearEl = document.querySelector('.year');
+
+// Select nav menu button in mobile
+const btnMobileNav = document.querySelector('.btn-mobile-nav');
+const headerEl = document.querySelector('.header');
+
+// Set current year
 yearEl.textContent = new Date().getFullYear();
+
+
+// ********* Functions and Events *********
+
+// Make mobile navigation work
+btnMobileNav.addEventListener('click', function() {
+    if (headerEl.classList.contains("nav-open")) {
+        headerEl.classList.remove("nav-open");
+    } else {
+        headerEl.classList.add("nav-open");
+    };
+});
 
 
 // Fix flexbox gap property missing in some Safari versions
