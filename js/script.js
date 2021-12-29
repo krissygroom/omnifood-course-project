@@ -80,6 +80,7 @@ const obs = new IntersectionObserver(
 obs.observe(sectionHeroElement);
 
 // Fix flexbox gap property missing in some Safari versions
+// Add to all sites for now
 function checkFlexGap() {
     const flex = document.createElement("div");
     flex.style.display = "flex";
