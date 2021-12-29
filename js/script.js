@@ -48,6 +48,37 @@ allLinks.forEach(function(link) {
 });
 
 
+
+//*************************************/
+// Sticky navigation after scrolling below hero section
+
+// using IntersectionObserver class to observe scrolling past hero
+const sectionHeroElement = document.querySelector('.section-hero');
+
+const obs = new IntersectionObserver(
+    function(entries) {
+        // only one threshold value so we select that here
+        const ent = entries[0];
+        if (ent.isIntersecting === false) {
+            document.body.classList.add("sticky");
+        }
+        else {
+            document.body.classList.remove("sticky");
+        };
+}, 
+{
+    // first observe the root in the viewport 
+    root: null,
+    // event (sticky nav) will happen when 0% of hero section is in viewport
+    // (if threshold: 1 - event will happen as soon as all of hero section is
+    // in view)
+    threshold: 0,
+    // rootMargin to avoid overlapping the featured in section
+    rootMargin: '-80px',
+
+});
+obs.observe(sectionHeroElement);
+
 // Fix flexbox gap property missing in some Safari versions
 function checkFlexGap() {
     const flex = document.createElement("div");
